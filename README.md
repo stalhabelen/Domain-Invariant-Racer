@@ -1,4 +1,4 @@
-# Domain-Invariant Racer (CarRacing-v3)
+# Domain-Invariant Racer
 
 This repo is a RL project where I trained a PPO agent on **Gymnasium CarRacing-v3** and tried to make it less sensitive to visual changes.
 
