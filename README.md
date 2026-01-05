@@ -16,6 +16,18 @@ The agent was trained for **2,000,000 timesteps** (2M iterations).
 
 ## Results
 
+### What worked (why this helps sim-to-real)
+One nice outcome is that the agent didn’t just memorize colors.  
+Even when the observation colors/noise change, it still performs reasonably well because it learned more *stable* cues in the scene.
+
+From the value-based attention map, the model focuses more on the **road geometry** rather than specific textures:
+- the **car heading / orientation**
+- the **road boundaries and curvature**
+- and especially the **corner / chicane area** (you can see the attention getting denser there)
+
+So instead of relying on “this exact shade of green/gray means grass/road”, it learns the structure that actually matters for control. This is exactly the kind of behavior we want when trying to reduce the **visual sim-to-reality gap**.
+
+
 ### Robustness vs Visual Noise
 ![Robustness Curve](Domain-Invariant-Racer/assets/robustness_curve.png)
 
@@ -26,15 +38,15 @@ The agent was trained for **2,000,000 timesteps** (2M iterations).
 Video file: [assets/demo_a100-episode-0.mp4](Domain-Invariant-Racer/assets/demo_a100-episode-0.mp4)
 
 ## Repo structure
-.
-├── assets/
-│ ├── demo_a100-episode-0.mp4
-│ ├── robustness_curve.png
-│ └── saliency_map.png
-└── notebooks/
-└── Domain_Invariant_Racer.ipynb
-
-
+```text
+Domain-Invariant-Racer/
+  assets/
+    demo_a100-episode-0.mp4
+    robustness_curve.png
+    saliency_map.png
+  notebooks/
+    Domain_Invariant_Racer.ipynb
+```
 ## Setup
 
 Install the main dependencies:
