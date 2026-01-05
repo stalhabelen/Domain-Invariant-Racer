@@ -17,13 +17,13 @@ The agent was trained for **2,000,000 timesteps** (2M iterations).
 ## Results
 
 ### Robustness vs Visual Noise
-![Robustness Curve](assets/robustness_curve.png)
+![Robustness Curve](Domain-Invariant-Racer/assets/robustness_curve.png)
 
 ### Agent View + Value-Based Attention
-![Saliency](assets/saliency_map.png)
+![Saliency](Domain-Invariant-Racer/assets/saliency_map.png)
 
 ## Demo
-Video file: [assets/demo_a100-episode-0.mp4](assets/demo_a100-episode-0.mp4)
+Video file: [assets/demo_a100-episode-0.mp4](Domain-Invariant-Racer/assets/demo_a100-episode-0.mp4)
 
 ## Repo structure
 .
